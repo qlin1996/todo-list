@@ -1,8 +1,78 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+:root {
+  --color-one: #ffffff;
+  --color-two: #0d324d;
+  --color-three: #7f5a83;
+}
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
+}
+
+h1,
+label {
+  color: var(--color-one);
+}
+
+h1 {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+button {
+  font-size: medium;
+  line-height: 2;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  width: 100%;
+  line-height: 2;
+}
+
+/***********/
+/*** App ***/
+/***********/
+
+.App {
+  background-image: linear-gradient(var(--color-two), var(--color-three));
+  color: black;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/***********/
+/** Login **/
+/***********/
+
+.Login {
+  width: 80%;
+  max-width: 400px;
+}
+
+.input-container {
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.input-container > i {
+  position: absolute;
+  top: 7px;
+  left: 10px;
+  color: var(--color-two);
+}
+
+.input-container > input {
+  padding-left: 30px;
 }
