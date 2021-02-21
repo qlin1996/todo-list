@@ -7,10 +7,7 @@ const Todo = ({ todo, setTodos, setAddEdit, setSelectedTodo }) => {
   };
 
   const handleEdit = () => {
-    let list = JSON.parse(localStorage.getItem('list'));
-    let updatedList = list.filter((t) => t !== todo);
-    localStorage.setItem('list', JSON.stringify(updatedList));
-    setTodos(updatedList);
+    handleDelete();
     setSelectedTodo(todo);
     setAddEdit(true);
   };

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import AddEdit from './AddEdit';
 import Todo from './Todo';
+import { search } from '../util';
 
 const TodosList = ({ setLoggedIn }) => {
   const [addEdit, setAddEdit] = useState(false);
@@ -15,9 +16,7 @@ const TodosList = ({ setLoggedIn }) => {
   const handleSearch = async (e) => {
     setSearchValue(e.target.value);
     let list = JSON.parse(localStorage.getItem('list'));
-    const todoSelected = list.filter((todo) => {
-      return todo.toLowerCase().indexOf(e.target.value.toLowerCase()) >= 0;
-    });
+    const todoSelected = search(list, e.target.value);
     setTodos(todoSelected);
   };
 

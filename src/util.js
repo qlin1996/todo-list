@@ -25,3 +25,9 @@ export const validateUser = (email, password) => {
     };
   }
 };
+
+export const search = (list, string) => {
+  return list.filter((todo) => {
+    return todo.toLowerCase().indexOf(string.toLowerCase()) >= 0;
+  });
+};
