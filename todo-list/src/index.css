@@ -4,6 +4,9 @@
   --color-one: #ffffff;
   --color-two: #0d324d;
   --color-three: #7f5a83;
+  --color-four: red;
+  --large-spacing: 30px;
+  --small-spacing: 10px;
 }
 
 * {
@@ -20,7 +23,11 @@ label {
 
 h1 {
   text-align: center;
-  padding-bottom: 20px;
+  padding-bottom: var(--large-spacing);
+}
+
+small {
+  color: var(--color-four);
 }
 
 button {
@@ -36,6 +43,11 @@ form {
 input {
   width: 100%;
   line-height: 2;
+  padding-left: var(--small-spacing);
+}
+
+i {
+  color: var(--color-two);
 }
 
 /***********/
@@ -56,23 +68,83 @@ input {
 /** Login **/
 /***********/
 
-.Login {
+.login {
   width: 80%;
   max-width: 400px;
 }
 
+.login input {
+  outline: none;
+}
+
 .input-container {
   position: relative;
-  padding-bottom: 15px;
+  padding-bottom: var(--small-spacing);
 }
 
 .input-container > i {
   position: absolute;
-  top: 7px;
+  top: 8px;
   left: 10px;
-  color: var(--color-two);
 }
 
 .input-container > input {
-  padding-left: 30px;
+  padding-left: var(--large-spacing);
+}
+
+.validation-error {
+  border-color: red;
+}
+
+.submission-error {
+  text-align: center;
+}
+
+.Login button {
+  margin-top: var(--small-spacing);
+}
+
+/***********/
+/** List  **/
+/***********/
+.list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 80%;
+  max-width: 400px;
+}
+
+.search-container {
+  display: flex;
+}
+
+.search-container > button,
+.add > button {
+  margin-left: var(--small-spacing);
+  width: 30%;
+}
+
+.add {
+  flex-direction: row;
+  margin-bottom: var(--small-spacing);
+}
+
+.todo-container {
+  display: flex;
+  background-color: var(--color-one);
+  margin-bottom: var(--small-spacing);
+  line-height: 3;
+  padding-left: var(--small-spacing);
+}
+
+.icons {
+  align-self: flex-end;
+}
+.icons i {
+  padding: 5px;
+}
+
+.todo {
+  width: 85%;
 }
